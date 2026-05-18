@@ -1,0 +1,205 @@
+/* Typora GitHub Theme - Adapted for Headless PDF Export */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+#write {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+    #write { max-width: 1024px; }
+}
+
+@media only screen and (min-width: 1800px) {
+    #write { max-width: 1200px; }
+}
+
+#write > ul:first-child,
+#write > ol:first-child {
+    margin-top: 30px;
+}
+
+a { color: #4183C4; }
+
+h1, h2, h3, h4, h5, h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+h1 tt, h1 code { font-size: inherit; }
+h2 tt, h2 code { font-size: inherit; }
+h3 tt, h3 code { font-size: inherit; }
+h4 tt, h4 code { font-size: inherit; }
+h5 tt, h5 code { font-size: inherit; }
+h6 tt, h6 code { font-size: inherit; }
+
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+h3 { font-size: 1.5em; line-height: 1.43; }
+h4 { font-size: 1.25em; }
+h5 { font-size: 1em; }
+h6 { font-size: 1em; color: #777; }
+
+p, blockquote, ul, ol, dl, table { margin: 0.8em 0; }
+li > ol, li > ul { margin: 0 0; }
+
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+ul, ol { padding-left: 30px; }
+ul:first-child, ol:first-child { margin-top: 0; }
+ul:last-child, ol:last-child { margin-bottom: 0; }
+
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote { padding-right: 0; }
+
+table {
+    padding: 0;
+    word-break: initial;
+    border-collapse: collapse;
+}
+
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+
+table tr:nth-child(2n), thead { background-color: #f8f8f8; }
+
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+
+table th:first-child, table td:first-child { margin-top: 0; }
+table th:last-child, table td:last-child { margin-bottom: 0; }
+
+code, tt {
+    border: 1px solid #e7eaed;
+    background-color: #f3f4f4;
+    border-radius: 3px;
+    padding: 0 2px 0 2px;
+    font-size: 0.9em;
+    font-family: "Lucida Console", Consolas, "Courier", monospace;
+}
+
+pre {
+    background-color: #f8f8f8;
+    border: 1px solid #e7eaed;
+    border-radius: 3px;
+    padding: 8px;
+    overflow: auto;
+    margin: 1em 0;
+}
+
+pre > code {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    font-size: 0.9em;
+}
+
+/* Syntax highlighting colors matching Typora */
+code span.kw { color: #a71d5d; font-weight: bold; } /* keyword */
+code span.dt { color: #795da3; } /* datatype */
+code span.dv { color: #0086b3; } /* decimal value */
+code span.bn { color: #0086b3; } /* base-n */
+code span.fl { color: #0086b3; } /* float */
+code span.ch { color: #183691; } /* char */
+code span.st { color: #183691; } /* string */
+code span.co { color: #969896; font-style: italic; } /* comment */
+code span.ot { color: #0086b3; } /* other token */
+code span.al { color: #ff0000; } /* alert */
+code span.fu { color: #795da3; } /* function */
+code span.er { color: #ff0000; font-weight: bold; } /* error */
+code span.wa { color: #ff0000; font-weight: bold; } /* warning */
+code span.cn { color: #0086b3; } /* constant */
+code span.sc { color: #0086b3; } /* special char */
+code span.vs { color: #183691; } /* verbatim string */
+code span.ss { color: #183691; } /* special string */
+
+.task-list-item { list-style-type: none; }
+.task-list-item input { margin-left: -1.3em; }
+
+@media print {
+    html { font-size: 13px; }
+    table, pre { page-break-inside: avoid; }
+    pre { word-wrap: break-word; }
+}
+
+.title {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+.author, .date {
+    text-align: center;
+    color: #777;
+    margin: 0.5em 0;
+}
+
+/* MathJax/KaTeX adjustments */
+.math.display {
+    margin: 1em 0;
+    text-align: center;
+}
+
+/* Mermaid chart centering */
+.mermaid {
+    text-align: center;
+    margin: 1em 0;
+}
