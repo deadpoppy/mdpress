@@ -1,8 +1,50 @@
 # typora-pdf-export
 
-将 Markdown 文件导出为具有 **Typora 级视觉品质** 的 PDF，完全基于命令行自动化，无需打开 Typora GUI。
+> **在命令行里，一键得到 Typora 品质的 PDF。**
 
-> **适用场景**：批量导出笔记、CI/CD 文档流水线、AI Agent 自动渲染报告、需要数学公式 / Mermaid 图表 / 代码高亮的 Markdown 转 PDF。
+将 Markdown 导出为具有 **Typora 级视觉品质** 的 PDF——**无需打开 Typora，无需安装 4GB LaTeX，无需手写 CSS**。一行命令，搞定公式、图表、代码高亮与精美排版。
+
+```bash
+node scripts/md2pdf.js thesis.md --toc
+# 输出 thesis.pdf，自带目录、LaTeX 公式、Mermaid 流程图
+```
+
+---
+
+## ✨ 为什么选择它？
+
+市面上的 Markdown 转 PDF 工具，总让你在 **"效果"**、**"自动化"**、**"功能"** 之间做取舍：
+
+| 方案 | 公式 | Mermaid | 脚注/任务列表 | 自动化 | 接近 Typora |
+|------|:--:|:-------:|:-----------:|:----:|:---------:|
+| Typora / Obsidian 导出 | ✅ | ✅ | ✅ | ❌ GUI  only | ✅ |
+| Pandoc + LaTeX | ✅ | ❌ | ⚠️ | ✅ | ❌ 学术风 |
+| markdown-pdf (npm) | ❌ | ❌ | ❌ | ✅ | ❌ 太简陋 |
+| md-to-pdf (npm) | ⚠️ | ❌ | ❌ | ✅ | ❌ 功能弱 |
+| WeasyPrint | ❌ | ❌ | ❌ | ✅ | ❌ 无 JS 引擎 |
+| VS Code Markdown PDF | ✅ | ⚠️ | ⚠️ | ❌ 插件 | ✅ |
+| **本工具** | **✅** | **✅** | **✅** | **✅ CLI** | **✅** |
+
+**本工具是唯一同时满足以下三点的方案：**
+
+1. **🎨 Typora 级渲染** —— 复用 Typora 官方 CSS 主题，不是 LaTeX 的学术排版，是熟悉的现代文档风格
+2. **🤖 完全命令行自动化** —— 适合 AI Agent、CI/CD、批量脚本，无需打开任何 GUI
+3. **📐 扩展语法全支持** —— LaTeX 公式、Mermaid 图表、脚注、任务列表、YAML 元数据、代码高亮，全部原生支持
+
+---
+
+## 🚀 一行命令，即刻使用
+
+```bash
+# 基础导出
+node scripts/md2pdf.js report.md
+
+# 带目录 + 暗色主题 + 自定义边距
+node scripts/md2pdf.js report.md --toc --theme night --margin 15mm
+
+# 复杂技术文档（公式 + 流程图 + 代码高亮）
+node scripts/md2pdf.js thesis.md thesis.pdf --toc --highlight-style zenburn
+```
 
 ---
 
