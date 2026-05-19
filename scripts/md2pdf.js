@@ -75,7 +75,12 @@ function runPandoc(inputFile, outputHtml, opts) {
         ];
 
         if (opts.css) args.push('--css', opts.css);
-        if (opts.toc) { args.push('--toc'); args.push('--toc-depth', String(opts.tocDepth || 3)); }
+        if (opts.toc) {
+            args.push('--toc');
+            args.push('--toc-depth', String(opts.tocDepth || 3));
+        } else {
+            args.push('--toc=false');
+        }
         if (opts.katex) args.push('--katex');
         else if (opts.mathjax) args.push('--mathjax');
 
