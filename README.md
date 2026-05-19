@@ -1,4 +1,4 @@
-# typora-pdf-export
+# mdpress
 
 > **在命令行里，一键得到 Typora 品质的 PDF。**
 
@@ -90,7 +90,7 @@ Typora 本身**未提供 CLI 导出接口**（官方 issue #4261 / #6528 长期�
 ### 1. 克隆仓库
 
 ```bash
-git clone https://github.com/deadpoppy/typora-pdf-export.git ~/.agents/skills/typora-pdf-export
+git clone https://github.com/deadpoppy/mdpress.git ~/.agents/skills/mdpress
 ```
 
 ### 2. 安装系统依赖
@@ -124,7 +124,7 @@ npm install -g puppeteer
 ### 4. 验证安装
 
 ```bash
-cd ~/.agents/skills/typora-pdf-export
+cd ~/.agents/skills/mdpress
 node scripts/md2pdf.js --help
 ```
 
@@ -183,17 +183,17 @@ node scripts/md2pdf.js book.md --toc --toc-depth 2
 
 ```bash
 # 安装到 Kimi skills 目录
-git clone https://github.com/deadpoppy/typora-pdf-export.git ~/.agents/skills/typora-pdf-export
+git clone https://github.com/deadpoppy/mdpress.git ~/.agents/skills/mdpress
 ```
 
 安装后，对 Kimi 说：
 
 > "帮我把 `report.md` 导出成 PDF，要带上目录，用 night 主题。"
 
-Kimi 会自动识别 `typora-pdf-export` skill，并执行：
+Kimi 会自动识别 `mdpress` skill，并执行：
 
 ```bash
-node ~/.agents/skills/typora-pdf-export/scripts/md2pdf.js report.md report.pdf --toc --theme night
+node ~/.agents/skills/mdpress/scripts/md2pdf.js report.md report.pdf --toc --theme night
 ```
 
 ---
@@ -201,7 +201,7 @@ node ~/.agents/skills/typora-pdf-export/scripts/md2pdf.js report.md report.pdf -
 ## 文件结构
 
 ```
-typora-pdf-export/
+mdpress/
 ├── README.md                 # 本文件（人类 + Agent 阅读）
 ├── SKILL.md                  # Kimi Skill 元数据与指令（Agent 核心入口）
 ├── scripts/

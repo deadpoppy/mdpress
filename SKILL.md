@@ -1,9 +1,9 @@
 ---
-name: typora-pdf-export
+name: mdpress
 description: Convert Markdown files to beautifully styled PDFs using Pandoc and headless Chrome with Typora-like rendering. Supports extended Markdown syntax including tables, LaTeX math (KaTeX/MathJax), Mermaid diagrams, task lists, footnotes, and syntax highlighting. Use when the user needs to export a .md file to PDF with high-quality typography, math formulas, code blocks, or diagrams, especially when Typora itself lacks a CLI export option.
 ---
 
-# Typora PDF Export
+# mdpress
 
 Convert Markdown to PDF with Typora-like visual quality, fully automated via command line.
 
